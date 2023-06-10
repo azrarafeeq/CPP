@@ -6,7 +6,7 @@
 /*   By: arafeeq <arafeeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:06:20 by arafeeq           #+#    #+#             */
-/*   Updated: 2023/06/06 19:37:24 by arafeeq          ###   ########.fr       */
+/*   Updated: 2023/06/10 11:48:01 by arafeeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void print_char(char c)
 {
-	std::cout << "Type of the Literal is CHARACTER" << std::endl;
+	std::cout << GREEN << "Type of the Literal is CHARACTER" << RESET << std::endl;
 	std::cout << "char: " << c << std::endl;;
 	std::cout << "int: Not Possible" << std::endl;
 	std::cout << "float: Not Possible" << std::endl;
@@ -25,7 +25,7 @@ void print_int(int in, float fl, double db)
 {
 	fl = static_cast<float>(in);
 	db = static_cast<double>(in);
-	std::cout << "Type of the Literal is INTEGER" << std::endl;
+	std::cout << GREEN << "Type of the Literal is INTEGER" << RESET << std::endl;
 	std::cout << "char: Not displayable" << std::endl;
 	std::cout << "int: " << in << std::endl;
 	std::cout << "float: " << fl << ".0f" << std::endl;
@@ -37,7 +37,7 @@ void print_float(int in, float fl, double db, int flag)
 	if (flag == 1)
 	{
 		db = static_cast<double>(fl);
-		std::cout << "Type of the Literal is FLOAT" << std::endl;
+		std::cout << GREEN << "Type of the Literal is FLOAT" << RESET << std::endl;
 		std::cout << "char: impossible" << std::endl;
 		std::cout << "int: impossible" << std::endl;
 		std::cout << "float: " << fl << "f" << std::endl;
@@ -47,13 +47,13 @@ void print_float(int in, float fl, double db, int flag)
 	{
 		in = static_cast<int>(fl);
 		db = static_cast<double>(fl);
-		std::cout << "Type of the Literal is FLOAT" << std::endl;
+		std::cout << GREEN << "Type of the Literal is FLOAT" << RESET << std::endl;
 		std::cout << "char: Not displayable" << std::endl;
 		std::cout << "int: " << in << std::endl;
 		std::cout << "float: " << fl << "f" << std::endl;
 		std::cout << "double: " << db << std::endl;
 	}
-	/// printing .0 after whole numbers but float
+	/// printing .0 after whole numbers for float and double (ex: 42.0)
 }
 
 void ft_print_double(int in, float fl, double db, int flag)
@@ -62,7 +62,7 @@ void ft_print_double(int in, float fl, double db, int flag)
 	if (flag == 1)
 	{
 		fl = static_cast<double>(db);
-		std::cout << "Type of the Literal is DOUBLE" << std::endl;
+		std::cout << GREEN << "Type of the Literal is DOUBLE" << RESET << std::endl;
 		std::cout << "char: impossible" << std::endl;
 		std::cout << "int: impossible" << std::endl;
 		std::cout << "float: " << fl << "f" << std::endl;
@@ -72,7 +72,7 @@ void ft_print_double(int in, float fl, double db, int flag)
 	{
 		in = static_cast<int>(fl);
 		db = static_cast<double>(fl);
-		std::cout << "Type of the Literal is DOUBLE" << std::endl;
+		std::cout << GREEN << "Type of the Literal is DOUBLE" << RESET << std::endl;
 		std::cout << "char: Not displayable" << std::endl;
 		std::cout << "int: " << in << std::endl;
 		std::cout << "float: " << fl << "f" << std::endl;

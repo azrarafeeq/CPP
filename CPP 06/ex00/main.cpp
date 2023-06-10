@@ -6,7 +6,7 @@
 /*   By: arafeeq <arafeeq@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 19:01:13 by arafeeq           #+#    #+#             */
-/*   Updated: 2023/06/06 19:37:00 by arafeeq          ###   ########.fr       */
+/*   Updated: 2023/06/10 16:40:33 by arafeeq          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int ft_is_int(std::string const str, int in, float fl, double db)
 	while(++i < str_len)
 		if (!(str.at(i) >= '0' && str.at(i) <= '9'))
 			return (0);
-	if (atoi(str.c_str()) == -1 && str != "-1")
+	if ((atoi(str.c_str()) == -1 && str != "-1") || (atoi(str.c_str()) == 0 && str != "0"))
 		return (0);
 	else
 	{
@@ -77,7 +77,7 @@ int ft_is_float(std::string const str, int in, float fl, double db)
 		}
 		i++;
 	}
-	if (atof(str.c_str()) == -1 /* && str != "-1.0" */) // when will atof have an error?? // -1.0f will not work
+	if ((atof(str.c_str()) == -1 && str != "-1.0f") || point_len != 1) 
 		return (0);
 	else
 	{
@@ -120,7 +120,7 @@ int ft_is_double(std::string const str, int in, float fl, double db)
 		}
 		i++;
 	}
-	if (atof(str.c_str()) == -1 /* && str != "-1.0" */) // when will atof have an error??
+	if ((atof(str.c_str()) == -1 && str != "-1.0") || point_len != 1)
 		return (0);
 	else
 	{
@@ -141,9 +141,8 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		ScalarConverter obj;
 		std::string str(argv[1]);
 		//std::cout << str << std::endl;
-		obj.convert(str);
+		ScalarConverter::convert(str);
 	}
 }

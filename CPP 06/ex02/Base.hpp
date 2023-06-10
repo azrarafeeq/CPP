@@ -15,10 +15,12 @@
 
 # define GREEN "\033[38:5:2m"
 # define RED "\033[38:5:9m"
+# define RED_LIGHT "\033[1;38:5:131m"
 # define RESET "\033[0m"
 
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 class Base
 {

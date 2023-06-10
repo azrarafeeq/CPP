@@ -20,7 +20,8 @@ int main(void)
 	Base* base_ptr;
 
 	base_ptr = generate();
-	// identify(base_ptr);
+	identify(base_ptr);
 	// identify(*base_ptr);
 
+	delete base_ptr;
 }

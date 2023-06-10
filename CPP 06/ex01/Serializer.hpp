@@ -19,6 +19,7 @@
 # define RESET "\033[0m"
 
 #include <iostream>
+#include <stdint.h>
 
 #include "Data.hpp"
 
